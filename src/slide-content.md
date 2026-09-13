@@ -1,6 +1,6 @@
 # Slide 1: During the next five minutes...
 
-* **Why** you should consider buildong a custom MCP server for data-intensive platforms (SIEM, observability)
+* **Why** you should consider writing a custom MCP server for data-intensive platforms (SIEM, observability)
 * **How** to iteratively build, test, and run STDIO MCP servers — for Python security agents or Claude, Codex, OpenCode
 
 # Slide 2: Who am I?
