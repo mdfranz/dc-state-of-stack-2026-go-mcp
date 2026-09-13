@@ -10,6 +10,8 @@
 * **Last 2.5 years** — building blue-team security agents
 * **This talk** — lessons from CrowdStrike, Chronicle, Coralogix, and more
 
+> built a dedicated dozen MCP servers in Go, Rust, or Python in 2026
+
 # Slide 3: Why MCP?
 
 USB for agentw with  well-understood challenges:
