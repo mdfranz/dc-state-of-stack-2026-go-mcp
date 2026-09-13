@@ -1,20 +1,20 @@
 # Slide 1: During the next five minutes...
 
-* **Why** build a custom MCP server for data-intensive platforms (SIEM, observability)
+* **Why** you should consider buildong a custom MCP server for data-intensive platforms (SIEM, observability)
 * **How** to iteratively build, test, and run STDIO MCP servers — for Python security agents or Claude, Codex, OpenCode
 
 # Slide 2: Who am I?
+
+> built a dedicated dozen MCP servers in Go, Rust, or Python in 2026
 
 * **Security & Compliance Lead, Pydantic** — Logfire, plus security agents with Pydantic AI
 * **25 years** — Cisco, Tenable, Mandiant, Ping Identity, T. Rowe Price
 * **Last 2.5 years** — building blue-team security agents
 * **This talk** — lessons from CrowdStrike, Chronicle, Coralogix, and more
 
-> built a dedicated dozen MCP servers in Go, Rust, or Python in 2026
-
 # Slide 3: Why MCP?
 
-USB for agentw with  well-understood challenges:
+"USB for agents" with  well-understood challenges:
 * **Token burn** — large JSON payloads overwhelming agent content
 * **Agent thrashing** — hallucinated queries and API calls leading to agent delays
 * **Security** — inherent vulnerabilities, RBAC challenges, and more
