@@ -1,6 +1,4 @@
-# Slide 1: Overview
-
-In the next 5 minutes:
+# Slide 1: During the next five minutes...
 
 * **Why** build a custom MCP server for data-intensive platforms (SIEM, observability)
 * **How** to iteratively build, test, and run STDIO MCP servers — for Python security agents or Claude, Codex, OpenCode
@@ -10,15 +8,14 @@ In the next 5 minutes:
 * **Security & Compliance Lead, Pydantic** — Logfire, plus security agents with Pydantic AI
 * **25 years** — Cisco, Tenable, Mandiant, Ping Identity, T. Rowe Price
 * **Last 2.5 years** — building blue-team security agents
-* **This talk** — lessons from CrowdStrike, Chronicle, Coralogix
+* **This talk** — lessons from CrowdStrike, Chronicle, Coralogix, and more
 
 # Slide 3: Why MCP?
 
-The well-understood challenges:
-
-* **Token burn** — large JSON payloads
-* **Agent thrashing** — hallucinated queries and API calls
-* **Security** — vulnerabilities, RBAC
+USB for agentw with  well-understood challenges:
+* **Token burn** — large JSON payloads overwhelming agent content
+* **Agent thrashing** — hallucinated queries and API calls leading to agent delays
+* **Security** — inherent vulnerabilities, RBAC challenges, and more
 
 > Not all-or-nothing: MCP works alongside CLI tools and CodeMode. A well-designed local server mitigates most of this.
 
@@ -26,18 +23,18 @@ The well-understood challenges:
 
 Vendor servers exist, but:
 
-* **Incomplete coverage** — not 100% of the API
-* **No logging or caching** — black box
+* **No logging or caching** — black boxes
 * **Generic tool calls** — tuned for everyone, not your telemetry
-
+* **Sketchy MCP Markplaces** - do you really trust them with your API keys?
 > You have to learn the API and the data anyway — package that knowledge in the server.
 
 # Slide 5: Why Go?
 
-* **Python/JS libraries are great** — their dependencies and startup are not
-* **Single binary** — CLI, TUI, and MCP server in one
-* **Easier lift than Rust** — for Python developers
-* **Still use Python** — when a solid client library exists (pyTenable)
+* **Sure, Python/JS libraries are great** — but their dependencies, supply chain risk, and startup time
+* **Single executable** — CLI/TUI and MCP server
+* **Easier lift than Rust** — for Python developers, easier/faster Agentic coding
+
+> Use other languages for time-expediency, or when trusted SDK is available in Python
 
 # Slide 6: Lessons — Start with the CLI
 
@@ -55,7 +52,6 @@ Vendor servers exist, but:
 
 * **Official MCP Go SDK**
 * **Cobra + Viper** — spf13
-* **One binary** — `serve` for stdio MCP, subcommands for the CLI
 
 > See GO-MCP-GUIDE.md
 
@@ -64,9 +60,11 @@ Vendor servers exist, but:
 * **Unit tests** — CLI and MCP server
 * **JSON-RPC smoke test** — no LLM required
 * **Pydantic AI harness** — real tools, real model
-* **Interactive** — Claude, Codex, OpenCode
+* **Interactive** — Explore with Claude, Codex, OpenCode, etc.
 
 # Slide 10: Start with 3 Primitives
+
+Simple example with OSquery
 
 The minimum loop an agent needs:
 
