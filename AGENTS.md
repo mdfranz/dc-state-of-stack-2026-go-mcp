@@ -10,3 +10,7 @@ Do not go overboard with punchy or unattural speak, let the speaker deliver the 
 
 - src/slide-content.md - the initial notes that we will use to produce slides
 - README.md
+
+# Python
+
+Always use `uv` to manage and run external dedepencies. Save any scripts in the scripts directory
