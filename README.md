@@ -19,9 +19,34 @@ We will cover:
 - **Why Go for MCP:** Why Go is the ultimate language for building lightweight, secure, and low-latency MCP servers.
 - **Wrapping Security APIs:** How to quickly wrap security APIs (SIEM, SOAR, EDR) into LLM-friendly tool definitions using Go's strong typing.
 
----
-## Outline
+## Presentation & Artifacts
 
+- **Slides (PDF):** [`dist/go-ing-fast-with-mcp-final.pdf`](dist/go-ing-fast-with-mcp-final.pdf)
+- **Slides (PowerPoint):** [`dist/go-ing-fast-with-mcp.pptx`](dist/go-ing-fast-with-mcp.pptx)
+- **Architecture & Patterns Guide:** [`refs/GO-MCP-GUIDE.md`](refs/GO-MCP-GUIDE.md)
+
+---
+
+## Talk Outline
+
+1. **Introduction & Objective:** Delivering fast, lean MCP servers for security agents
+2. **Who am I?** Background in security infrastructure and blue-team agents
+3. **MCP and its Discontents:** Token burn, agent thrashing, and security boundaries
+4. **Long Live MCP:** Complementary roles for MCP, CLI tools, and CodeMode
+5. **Why Custom MCP Servers?** Domain-tuned logging, caching, and custom telemetry
+6. **Why Go?** Single binary, fast startup, low supply-chain overhead, strong typing
+7. **Minimal Go Template:** Decoupled architecture (`cmd/` adapter, `internal/` core)
+8. **Planning with `GO-MCP-GUIDE.md`:** Standard layout, stdio transport, iterative design
+9. **Instrument & Iterate:** Telemetry-first server development
+10. **Test Everything:** Unit tests, JSON-RPC smoke tests, and LLM harness
+11. **Climbing the Tool Ladder:** Progressive disclosure (`list` → `search` → `describe` → `query`)
+12. **Strongly Typed MCP Servers:** Enforcing schemas and documentation with Go structs
+13. **Guard Out:** Bounding queries, filters, and timeouts
+14. **Guard In:** Bounding responses, payload caps, truncation annotations, out-of-band export
+15. **E2E Testing with Pydantic AI:** Testing tools against real models and catching query hallucination
+16. **Session Analysis with Agentsview:** Inspecting agent tool calls and workflows locally
+17. **Observability with Logfire:** OpenTelemetry traces for agent turns and MCP operations
+18. **Resources & Takeaways:** Starter repositories, reference servers, and next steps
 
 ---
 
